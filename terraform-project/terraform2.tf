@@ -1,4 +1,4 @@
-/* terraform {
+terraform {
   backend "s3" {
     bucket         = "terraform-backend-bucket-b"
     key            = "terraform-projects/terraform.tfstate" # <--- unique key
@@ -6,4 +6,4 @@
     dynamodb_table = "terraform-backend-table-d"
   }
 }
-*/
+
