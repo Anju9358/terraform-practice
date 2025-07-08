@@ -22,10 +22,10 @@ Terraform configurations for provisioning AWS infrastructure. Includes remote ba
 🔄 Syncing Terraform State After Manual Changes
 If an instance was manually deleted and you want Terraform to recreate it:
 
-terraform apply
+terraform apply -
 This will recreate the missing resource(s) as defined in your configuration.
 
 If you don't want to recreate it and just want to sync the state with real infrastructure:
 
-terraform apply -refresh-only
+terraform apply -refresh-only -
 This updates the Terraform state file to match the actual infrastructure without applying any changes.
