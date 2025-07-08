@@ -19,11 +19,13 @@ Terraform configurations for provisioning AWS infrastructure. Includes remote ba
 - **`variables.tf`** – Contains variables for the S3 bucket name and DynamoDB table name used in the backend configuration.
 
 
-Sync Terraform State After Manual Changes
-If an instance was manually deleted and you want to recreate it:
+🔄 Syncing Terraform State After Manual Changes
+If an instance was manually deleted and you want Terraform to recreate it:
 
-<terraform apply> :This will re-create the missing instance based on your configuration.
+terraform apply
+This will recreate the missing resource(s) as defined in your configuration.
 
-If you don’t want to re-create and just want to sync the state:
+If you don't want to recreate it and just want to sync the state with real infrastructure:
 
-<terraform apply -refresh-only> : This updates the state file to match real infrastructure without changing anything.
+terraform apply -refresh-only
+This updates the Terraform state file to match the actual infrastructure without applying any changes.
