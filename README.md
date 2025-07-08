@@ -18,3 +18,12 @@ Terraform configurations for provisioning AWS infrastructure. Includes remote ba
 - **`backend.tf`** – Provisions an S3 bucket and DynamoDB table to be used for Terraform remote state backend and state locking.
 - **`variables.tf`** – Contains variables for the S3 bucket name and DynamoDB table name used in the backend configuration.
 
+
+Sync Terraform State After Manual Changes
+If an instance was manually deleted and you want to recreate it:
+
+<terraform apply> :This will re-create the missing instance based on your configuration.
+
+If you don’t want to re-create and just want to sync the state:
+
+<terraform apply -refresh-only> : This updates the state file to match real infrastructure without changing anything.

@@ -1,3 +1,4 @@
+/*
 terraform {
   backend "s3" {
     bucket         = "terraform-backend-bucket-b"
@@ -7,3 +8,4 @@ terraform {
   }
 }
 
+*/
